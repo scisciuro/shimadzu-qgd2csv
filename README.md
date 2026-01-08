@@ -39,7 +39,7 @@ m/z values are rounded to full integers.
 From example.qgd.
 Output as comma-separated file, shown here in tabulated form for clarity.
 ## TIC
-||retention_time / ms|retention_time / min|intensity|
+||rt / ms|rt / min|intensity|
 |---|---|---|---|
 |0|90000|1.5|3410925|
 |1|90100|1.5016666666666667|1407892|
@@ -54,7 +54,7 @@ Output as comma-separated file, shown here in tabulated form for clarity.
 `[ByteError corrected] Scan 4212: corrected n_bytes from 1 → 4`
 `Formatting data...`
 
-|rt_rounded|rt / ms|total_intensity|35|36|37|...|400|
+|rt / min|rt / ms|total_intensity|35|36|37|...|400|
 |---|---|---|---|---|---|---|---|
 |1.5|90000|3410925|31082|30505|29757|...|586|
 |1.50167|90100|1407892|12749|12505|12233|...|535|
