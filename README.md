@@ -1,5 +1,6 @@
 # shimadzu-qgd2csv
 A Python script to convert Shimadzu GC-MS `.qgd` files into `.csv` files for further processing. Provides TIC as well as TIC and individual m/z data.
+It is inspired and partly based on the R script from Bass, E. (2025). chromConverter: Chromatographic File Converter. http://doi.org/10.5281/zenodo.6792521, read_shimadzu_qgd.R
 
 # How it works
 The script takes a `.qgd` file from Shimadzu GCMSsolution as input. It consists of several binary streams, some of which are used to parse the information into a .csv file.
@@ -77,3 +78,7 @@ Output as comma-separated file, shown here in tabulated form for clarity.
 |4|0|90000|1.5|39.05|29580|
 |...|...|...|...|...|...|
 |2683113|7331|823100|13.718333333333334|400.2|533|
+
+# Next steps
+- add batch processing
+- options for metadata
