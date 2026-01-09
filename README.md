@@ -23,12 +23,14 @@ The header consists of:
 
 The m/z values are encoded as 2-byte integers, scaled by a factor of 20. The intensities are unsigned integers, where the byte-length is defined in the header. It is usually 2 or 3. However in some cases (high intensities than show as cut-offs in the GCMSsolution), the byte length is given as 1, although the intensity block is actually of a 4-byte length. In this case, of the last byte, only half is used (format: `0x7FFFFFFF`). This is checked and accounted for in the data import.
 
+This script comes with an `example.qgd`, which has one scan than needs correcting.
+
 ## "Spectrum Index"
 Contains the start byte positions of each new MS scan (aka retention time) in the "MS Raw Data" stream. This is used to validate each scan's block length and correct for possible mismatches, especially for high intensities.
 
 # Import options
-The script currently takes a single `.qgd` 
-Next, specify the output-filename for the `.csv` (default is `input-filename.csv`).
+The script currently takes a single `.qgd` file. Default folder is `./input/`, but the input takes a whole file path as well.
+Next, specify the output-filename (and file path) for the `.csv` (default is `./output/input-filename.csv`).
 You can choose between two options:
 - Import **MS1** (default) or **TIC**: "MS1" contains data of all retention times, m/z values, and intensities, plus the TIC. "TIC" only has retention time and TIC.
 - Format **long** or **wide** (default): "long" generates a "list" of m/z and intensity values, blocked by retention time/scan number. "wide" generates a table with the intensity values as one scan per row and retention time, TIC, and each m/z value as columns.
@@ -79,6 +81,11 @@ Output as comma-separated file, shown here in tabulated form for clarity.
 |...|...|...|...|...|...|
 |2683113|7331|823100|13.718333333333334|400.2|533|
 
-# Next steps
+---
+# Changelog
+2025-12-11: 0.0.1 - first version
+2026-01-09: 0.1.0 - first published version
+
+# Future steps
 - add batch processing
 - options for metadata
