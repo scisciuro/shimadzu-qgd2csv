@@ -83,9 +83,9 @@ Output as comma-separated file, shown here in tabulated form for clarity.
 
 ---
 # Changelog
-2025-12-11: 0.0.1 - first version
-2026-01-09: 0.1.0 - first published version
-2026-01-14: 0.2.4 - changed file handling, added batch conversion, minor style tweaks
+- 2025-12-11: 0.0.1 - first version
+- 2026-01-09: 0.1.0 - first published version
+- 2026-01-14: 0.2.4 - changed file handling, added batch conversion, minor style tweaks
 
 # Future steps
 - options for metadata
