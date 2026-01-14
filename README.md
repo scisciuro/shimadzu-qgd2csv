@@ -29,11 +29,12 @@ This script comes with an `example.qgd`, which has one scan than needs correctin
 Contains the start byte positions of each new MS scan (aka retention time) in the "MS Raw Data" stream. This is used to validate each scan's block length and correct for possible mismatches, especially for high intensities.
 
 # Import options
-The script currently takes a single `.qgd` file. Default folder is `./input/`, but the input takes a whole file path as well.
-Next, specify the output-filename (and file path) for the `.csv` (default is `./output/input-filename.csv`).
-You can choose between two options:
-- Import **MS1** (default) or **TIC**: "MS1" contains data of all retention times, m/z values, and intensities, plus the TIC. "TIC" only has retention time and TIC.
-- Format **long** or **wide** (default): "long" generates a "list" of m/z and intensity values, blocked by retention time/scan number. "wide" generates a table with the intensity values as one scan per row and retention time, TIC, and each m/z value as columns.
+The script is now controlled using the CLI.
+The default mode is "batch conversion" of .input/*.qgd to ./output/*.csv using "MS1" data and "wide" format.
+Optional: `--input-dir` and `--output-dir` <- specify input/output folder
+Optional: `--file` <- specify a sigle file for conversion (Path or filename in ./input/)
+Optional: `--what` <- Import **MS1** (default) or **TIC**: "MS1" contains data of all retention times, m/z values, and intensities, plus the TIC. "TIC" only has retention time and TIC.
+Optional: `--format` <- Format **long** or **wide** (default): "long" generates a "list" of m/z and intensity values, blocked by retention time/scan number. "wide" generates a table with the intensity values as one scan per row and retention time, TIC, and each m/z value as columns.
 
 Retention times are given in milliseconds and minutes for further processing.
 m/z values are rounded to full integers.
@@ -85,7 +86,7 @@ Output as comma-separated file, shown here in tabulated form for clarity.
 # Changelog
 2025-12-11: 0.0.1 - first version
 2026-01-09: 0.1.0 - first published version
+2026-01-14: 0.2.4 - changed file handling, added batch conversion, minor style tweaks
 
 # Future steps
-- add batch processing
 - options for metadata
