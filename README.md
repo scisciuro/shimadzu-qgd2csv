@@ -1,3 +1,9 @@
+[![DOI:10.5281/zenodo.18403670](https://zenodo.org/badge/DOI/10.5281/zenodo.18403670.svg)](https://doi.org/10.5281/zenodo.18403670)
+
+If you find this parser useful, please cite us in your publication:
+
+Witzler, M. (2026). scisciuro/shimadzu-qgd2csv: v0.2.4 (v0.2.4). Zenodo. https://doi.org/10.5281/zenodo.18403670
+
 # shimadzu-qgd2csv
 A Python script to convert Shimadzu GC-MS `.qgd` files into `.csv` files for further processing. Provides TIC as well as TIC and individual m/z data.
 It is inspired and partly based on the R script from Bass, E. (2025). chromConverter: Chromatographic File Converter. http://doi.org/10.5281/zenodo.6792521, read_shimadzu_qgd.R
